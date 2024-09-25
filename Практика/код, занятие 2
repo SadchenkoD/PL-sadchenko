@@ -1,0 +1,7 @@
+import math 
+x=(input("Введите переменную x:"))
+y=(input("Введите переменную y:"))
+z=(input("Введите переменную z:"))
+s=((2*math.cos(x-2/3))/(0.5+math.sin(y)*math.sin(y)))*(1+(math.pow(math.z,2))/(3-math.pow(math.z,2)/5)
+print("s",s)
+
