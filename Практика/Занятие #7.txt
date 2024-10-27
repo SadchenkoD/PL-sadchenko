@@ -1,0 +1,35 @@
+ #Задание_1
+
+
+n = int(input('Введите длину массива/D'))
+D = []
+for i in range(n):
+    print('введите', i, 'элемент:')
+    D.append(int(input())
+    sm_1=0
+    for x in D:
+   if x % 2 == 1 :
+       sm_1 += x
+
+    
+    print( Массив(D):"D")
+    print(сумма нечетных чисел массива: 'sm_1')
+
+
+Задание№2
+
+D = []  
+
+for i in range(8):
+    print('введите', i, 'элемент:') 
+    D.append(int(input()))  
+
+for i in range(len(D)):  
+    if D[i] < 15:
+        D[i] *= 2  
+        print('Преобразованное число:', D[i])  
+    else:
+        print('элемент больше числа "15"')
+
+A = D.copy()  
+print('Полученный массив :', A)
