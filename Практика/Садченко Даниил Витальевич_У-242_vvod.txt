@@ -1,0 +1,25 @@
+from random import uniform
+
+print("Исходная матрица:")  
+m = int(input("m: ")) 
+n = int(input("n: "))  
+a = [[uniform(10, 99) for i in range(m)] for j in range(n)]  
+for row in a:
+    print(*map('{:5.2f}'.format, row))  
+
+print("Полученная матрица:")
+
+max_elem = a[0][0]
+ie = je = 0
+for i in range(len(a)):
+    for j in range(len(a[0])):
+        if a[i][j] > max_elem:
+            max_elem = a[i][j]
+            ie = i 
+            je = j 
+
+a[0], a[ie] = a[ie], a[0]  
+a[0][0], a[0][je] = a[0][je], a[0][0]  
+
+for row in a:
+    print(*map('{:5.2f}'.format, row)) 
