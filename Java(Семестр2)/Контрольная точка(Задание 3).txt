@@ -1,0 +1,26 @@
+Задание: Удалить все гласные из введённой строки
+
+Решение:
+
+import java.util.Scanner;
+
+public class RemoveRussianVowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите строку: ");
+        String line = sc.nextLine();
+        
+        
+        char[] rus = {'у', 'е', 'ё', 'ы', 'а', 'о', 'э', 'я', 'и', 'ю',
+                      'У', 'Е', 'Ё', 'Ы', 'А', 'О', 'Э', 'Я', 'И', 'Ю'}; 
+        
+        
+        for (char vowel : rus) {
+            line = line.replace(String.valueOf(vowel), ""); 
+        }   
+        
+        System.out.println("Строка без гласных: " + line);
+        sc.close(); 
+    }
+}
+
